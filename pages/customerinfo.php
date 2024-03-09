@@ -35,12 +35,12 @@ require 'connect.php';
       border: 1px solid black;
     }
   </style>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/style/customerinfo.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="../style/customerinfo.css">
 </head>
 
 <body>
-    <?php include("../comp/header.php");
+    <?php include("./comp/header.php");
 if ($_SERVER['REQUEST_METHOD'] == "POST" || isset($_GET['cust_id']) && isset($_GET['customer_name'])) {
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         $customer_name = $_POST["customer_name"];

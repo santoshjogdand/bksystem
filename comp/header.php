@@ -19,9 +19,9 @@ echo '<header class="w-full mt-0 h-15 flex items-center bg-[#735DA5]">
     <div class="ml-auto text-white">
         <ul class="flex justify-end">
         <li class="px-10"><a href="../index.php">Home</a></li>
-            <li class="px-10"><a href="/pages/show_customers.php">Customers Info</a></li>
-            <li class="px-10"><a href="/pages/transfer.php">Money Transfer</a></li>
-            <li class="px-10"><a href="/pages/transfer_hist.php">Transfer History</a></li>
+            <li class="px-10"><a href="../pages/show_customers.php">Customers Info</a></li>
+            <li class="px-10"><a href="../pages/transfer.php">Money Transfer</a></li>
+            <li class="px-10"><a href="../pages/transfer_hist.php">Transfer History</a></li>
         </ul>
     </div>
 </nav>

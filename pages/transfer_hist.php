@@ -32,9 +32,8 @@ $result = mysqli_query($conn, $sql);
       border: 1px solid black;
     }
   </style>
-  <script src="https://cdn.tailwindcss.com"></script>
   
-  <link rel="stylesheet" href="/style/transfer_hist.css">
+  <link rel="stylesheet" href="../style/transfer_hist.css">
 </head>
 
 <body>

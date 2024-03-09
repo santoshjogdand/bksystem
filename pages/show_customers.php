@@ -38,9 +38,7 @@ $result = mysqli_query($conn, $sql);
       border: 1px solid black;
     }
   </style>
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <link rel="stylesheet" href="/style/showcust.css">
+  <link rel="stylesheet" href="../style/showcust.css">
 
 </head>
 
@@ -53,7 +51,7 @@ $result = mysqli_query($conn, $sql);
     <input type="text" class="font-[#735DA5] outline-none px-3 py-[2px] text-base  border-[2px] border-[#735DA5] shadow-[#735DA5] " required name="customer_name">
     <label for="customer_name" class="text-[#735DA5] font-semibold">Id: </label>
     <input type="number" class="font-[#735DA5] px-3 py-[2px] text-base outline-none border-[2px] border-[#735DA5] shadow-[#735DA5]" required name="cust_id">
-    <input type="submit" class="button text-white px-3 py-[2px] bg-[#EA4C89] text-base border-[2px] border-[#735DA5] shadow-[#735DA5]" name="submit">
+    <input type="submit" value="Search" class="button text-white px-3 py-[2px] bg-[#EA4C89] text-base border-[2px] border-[#735DA5] shadow-[#735DA5]" name="submit">
   </form>
   </div>
   <?php

@@ -9,7 +9,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     
-  <link rel="stylesheet" href="/style/index.css">
+  <link rel="stylesheet" href="style/index.css">
 </head>
 
 <body>
@@ -35,7 +35,7 @@
             </div>
         </div>  
         <div class='mr-10 animate-pulse'>
-            <img src="./style/bank.jpg" class="w-[750px]" alt="">
+            <img src="./bank.jpg" class="w-[750px]" alt="IMAGE NOT FOUND!!">
         </div>
     </div>
 </body>
