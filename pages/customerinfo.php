@@ -35,12 +35,13 @@ require 'connect.php';
       border: 1px solid black;
     }
   </style>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../style/customerinfo.css">
 </head>
 
-<body>
-    <?php include("./comp/header.php");
+<body class="flex flex-col justify-center item-center">
+  <div class="flex flex-col justify-center item-center ml-auto mr-auto">
+<?php 
 if ($_SERVER['REQUEST_METHOD'] == "POST" || isset($_GET['cust_id']) && isset($_GET['customer_name'])) {
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         $customer_name = $_POST["customer_name"];
@@ -55,9 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" || isset($_GET['cust_id']) && isset($_G
         $result2 = mysqli_query($conn, $sql2);
         $row = mysqli_fetch_assoc($result);
         if ($result->num_rows > 0) {
-            echo "<div class='w-full mt-20 text-center font-extrabold text-green-500'>Customer Info: $customer_name </div>";
+            echo "<div class='w-full ml-auto mr-auto flex justify-center mt-20 text-center font-extrabold text-green-500'>Customer Info: $customer_name </div>";
             
-        echo "<table class='mt-4'>";
+        echo "<table class='mt-4 '>";
         echo "<tr id='hrow'><th>ID</th><th>NAME</th><th>EMAIL</th><th>BALANCE</th></tr>";
         echo "<tr class='row'>";
         echo "<td>" . $row["id"] . "</td>";
@@ -97,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" || isset($_GET['cust_id']) && isset($_G
     exit;
 }
 ?>
-
+</div>
 </body>
 
 </html>
