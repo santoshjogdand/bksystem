@@ -46,25 +46,25 @@ $result = mysqli_query($conn, $sql);
   <?php include("../comp/header.php"); ?>
   <h1 class="text-4xl my-5 font-semibold text-[#735DA5]">All Customers</h1>
 <div class="flex justify-center mb-5">
-  <form action="customerinfo.php" method="POST" class="">
-    <label for="customer_name" class="text-[#735DA5] font-semibold">Name: </label>
-    <input type="text" class="font-[#735DA5] outline-none px-3 py-[2px] text-base  border-[2px] border-[#735DA5] shadow-[#735DA5] " required name="customer_name">
-    <label for="customer_name" class="text-[#735DA5] font-semibold">Id: </label>
-    <input type="number" class="font-[#735DA5] px-3 py-[2px] text-base outline-none border-[2px] border-[#735DA5] shadow-[#735DA5]" required name="cust_id">
-    <input type="submit" value="Search" class="button text-white px-3 py-[2px] bg-[#EA4C89] text-base border-[2px] border-[#735DA5] shadow-[#735DA5]" name="submit">
+  <form action="customerinfo.php" method="POST" >
+    <div class="flex md:h-7 md:flex-row flex-col item-center flex-col">
+    <label for="customer_name" class="text-[#735DA5] md:ml-2 font-semibold">Name: </label>
+    <input type="text" class="font-[#735DA5] outline-none md:ml-2 px-3 py-[2px] text-base  border-[2px] border-[#735DA5] shadow-[#735DA5] " required name="customer_name">
+    <label for="customer_name" class="text-[#735DA5] md:ml-2 font-semibold">Id: </label>
+    <input type="number" class="font-[#735DA5] px-3 py-[2px] md:ml-2 text-base outline-none border-[2px] border-[#735DA5] shadow-[#735DA5]" required name="cust_id">
+    <input type="submit" value="Search" class="button align-center text-center md:m-0 my-5  pt-[0px] text-white md:ml-2 px-3 py-[2px] bg-[#EA4C89] text-base border-[2px] border-[#735DA5] shadow-[#735DA5]" name="submit">
+    </div>
   </form>
   </div>
   <?php
   echo "<table>";
-  echo "<tr id='hrow'><th>ID</th><th>NAME</th><th>EMAIL</th><th>BALANCE</th></tr>";
+  echo "<tr id='hrow'><th>ID</th><th>NAME</th></tr>";
   while ($row = mysqli_fetch_assoc($result)) {
     echo "<tr class='row'>";
     echo "<td>" . $row["id"] . "</td>";
     $id = $row["id"];
     $name = $row["name"];
     echo "<td><a href='customerinfo.php?cust_id=$id&customer_name=$name'>" . strtoupper($row["name"]) . "</a></td>";
-    echo "<td>" . strtoupper($row["email"]) . "</td>";
-    echo "<td>" . $row["current_bal"] . "</td>";
     echo "</tr>";
   }
   echo "</table>";
